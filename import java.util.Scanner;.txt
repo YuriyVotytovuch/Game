@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class User {
+    String name;
+    int lvl;
+    int cash;
+    int damage;
+    int hp;
+    public User(String username, int u_lvl, int u_cash, int u_dam, int u_hp){
+        name=username;
+        lvl=u_lvl;
+        cash=u_cash;
+        damage=u_dam;
+        hp=u_hp;
+    }
+    static String registration(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введіть ваше ім'я: ");
+        String username = sc.nextLine();
+        System.out.println(username + ", вітаємо вас у (gamename)");
+        return username;
+    }
+    static User player = new User(registration(),0,600,25,100);
+
+}
